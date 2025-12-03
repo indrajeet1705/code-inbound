@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [operation, setOperation] = useState("Register");
   const [taskInput, setTaskInput] = useState("");
   const [tasks, setTasks] = useState([]);
