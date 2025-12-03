@@ -31,7 +31,7 @@ function App() {
   }, [token]);
 
   const fetchAllTask = async () => {
-    const response = await fetch("http://localhost:3001/api/tasks/user", {
+    const response = await fetch("https://code-inbound.onrender.com/api/tasks/user", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ function App() {
   };
 
   const registerUser = async () => {
-    const response = await fetch("http://localhost:3001/api/auth/register", {
+    const response = await fetch("https://code-inbound.onrender.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -62,7 +62,7 @@ function App() {
   };
 
   const loginUser = async () => {
-    const response = await fetch("http://localhost:3001/api/auth/login", {
+    const response = await fetch("https://code-inbound.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -84,7 +84,7 @@ function App() {
     if (!taskInput.trim()) return;
     
     if (editingId) {
-      const response = await fetch(`http://localhost:3001/api/tasks/${editingId}`, {
+      const response = await fetch(`https://code-inbound.onrender.com/api/tasks/${editingId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ function App() {
         toast.success(data.message)
       }
     } else {
-      const response = await fetch("http://localhost:3001/api/tasks", {
+      const response = await fetch("https://code-inbound.onrender.com/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -118,7 +118,7 @@ function App() {
   };
 
   const deleteTask = async (id) => {
-    const response = await fetch(`http://localhost:3001/api/tasks/${id}`, {
+    const response = await fetch(`https://code-inbound.onrender.com/api/tasks/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
